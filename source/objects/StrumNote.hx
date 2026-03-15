@@ -15,6 +15,8 @@ class StrumNote extends FlxSprite
 	public var sustainReduce:Bool = true;
 	private var player:Int;
 	
+	public var animOffsets:Map<String, Array<Float>> = new Map();
+	
 	public var texture(default, set):String = null;
 	private function set_texture(value:String):String {
 		if(texture != value) {
@@ -61,6 +63,11 @@ class StrumNote extends FlxSprite
 		texture = skin; //Load texture and anims
 		scrollFactor.set();
 		playAnim('static');
+	}
+
+	public function addOffset(name:String, x:Float = 0, y:Float = 0)
+	{
+		animOffsets[name] = [x, y];
 	}
 
 	public function reloadNote()
@@ -165,6 +172,7 @@ class StrumNote extends FlxSprite
 		{
 			centerOffsets();
 			centerOrigin();
+			if (animOffsets.exists(anim)) offset.set(offset.x + animOffsets.get(anim)[0], offset.y + animOffsets.get(anim)[1]);
 		}
 		if(useRGBShader) rgbShader.enabled = (animation.curAnim != null && animation.curAnim.name != 'static');
 	}

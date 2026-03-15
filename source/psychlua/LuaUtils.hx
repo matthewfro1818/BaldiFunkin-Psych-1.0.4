@@ -332,11 +332,11 @@ class LuaUtils
 	{
 		switch(spriteType.toLowerCase().replace(' ', ''))
 		{
-			//case "texture" | "textureatlas" | "tex":
-				//spr.frames = AtlasFrameMaker.construct(image);
+			case "texture" | "textureatlas" | "tex":
+				spr.frames = Paths.getTextureAtlas(image);
 
-			//case "texture_noaa" | "textureatlas_noaa" | "tex_noaa":
-				//spr.frames = AtlasFrameMaker.construct(image, null, true);
+			case "texture_noaa" | "textureatlas_noaa" | "tex_noaa":
+				spr.frames = Paths.getTextureAtlas(image, null, false);
 
 			case 'aseprite', 'ase', 'json', 'jsoni8':
 				spr.frames = Paths.getAsepriteAtlas(image);

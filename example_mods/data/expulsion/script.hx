@@ -17,6 +17,12 @@ import funkin.backend.DiscordClient;
 
 import flixel.util.FlxTimer;
 
+inline function hasVar(name:String):Bool
+{
+	// getVar returns null when the variable has not been set.
+	return getVar(name) != null;
+}
+
 // gameover vars
 var popUp:FlxSprite = null;
 var whiteUnderlay:FlxSprite = null;

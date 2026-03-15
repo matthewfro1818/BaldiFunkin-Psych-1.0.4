@@ -22,6 +22,12 @@ import funkin.backend.MathResolver;
 import funkin.backend.Conductor;
 import funkin.utils.CoolUtil;
 
+inline function hasVar(name:String):Bool
+{
+	// getVar returns null when the variable has not been set.
+	return getVar(name) != null;
+}
+
 import flixel.FlxCamera;
 
 import funkin.objects.AttachedSprite;

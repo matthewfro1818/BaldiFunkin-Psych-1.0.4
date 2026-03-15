@@ -42,6 +42,10 @@ import objects.BGSprite;
 import states.PlayState;
 import states.LoadingState;
 
+import funkin.FunkinAssets;
+import funkin.Constants;
+import funkin.utils.MathUtil;
+
 #if flxanimate
 import flxanimate.*;
 import flxanimate.PsychFlxAnimate as FlxAnimate;

@@ -7,6 +7,12 @@ import funkin.objects.Note;
 
 using StringTools;
 
+inline function hasVar(name:String):Bool
+{
+	// getVar returns null when the variable has not been set.
+	return getVar(name) != null;
+}
+
 function onCountdownStarted()
 {
 	var idx = 0;

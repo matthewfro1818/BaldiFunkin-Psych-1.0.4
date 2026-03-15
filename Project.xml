@@ -62,6 +62,7 @@
 	<set name="BUILD_DIR" value="export/32bit" if="32bits" />
 
 	<classpath name="source" />
+	<classpath name="extensions" />
 
 	<!-- __________________________ Game Assets & Etc. __________________________ -->
 	
@@ -116,6 +117,8 @@
 	<haxelib name="flixel" version="5.6.1"/>
 	<haxelib name="flixel-addons" version="3.2.2"/>
 	<haxelib name="tjson" version="1.4.0"/>
+	<haxelib name="hxIni" />
+	<haxelib name="away3d"/>
 
 	<!--Psych stuff needed-->
 	<haxelib name="linc_luajit" if="LUA_ALLOWED"/>

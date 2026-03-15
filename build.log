@@ -1,0 +1,10 @@
+﻿lime : [30;41m ERROR [0m (unknown position)
+At line:1 char:72
++ ... ych-1.0.4"; lime test windows -debug --no-color --verbose 2>&1 | Out- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([30;41m ERROR [0m (unknown position):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+   | Error: : unknown option '--no-color'.
+

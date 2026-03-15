@@ -1,0 +1,63 @@
+Creating C:/Users/mattf/Downloads/New folder (42)/BaldiFunkin-Psych-1.0.4/export/debug/windows/obj/obj/msvc1964-debug-nc/__pch/haxe/hxcpp.pch...
+hxcpp.cpp
+
+Compiling group: haxe
+cl.exe -Iinclude -IC:/Users/mattf/Downloads/New folder (42)/BaldiFunkin-Psych-1.0.4/.haxelib/hxdiscord_rpc/1,3,0/project/discord-rpc/include -DDISCORD_DISABLE_IO_THREAD -IC:/Users/mattf/Downloads/New folder (42)/BaldiFunkin-Psych-1.0.4/.haxelib/linc_luajit/git//linc/ -nologo /WX- /fp:precise -DHX_WINDOWS -GR -Od(optim-std) -Zi(optim-std) -FdC:\Users\mattf\Downloads\New folder (42)\BaldiFunkin-Psych-1.0.4\export\debug\windows\obj\obj/msvc1964-debug-nc/vc.pdb(optim-std) -Zi(debug) -FdC:\Users\mattf\Downloads\New folder (42)\BaldiFunkin-Psych-1.0.4\export\debug\windows\obj\obj/msvc1964-debug-nc/vc.pdb(debug) -Od(debug) -O2(release) -bigobj -Os(optim-size) -FS -Oy- -c -EHs -GS- -IC:/Users/mattf/Downloads/New folder (42)/BaldiFunkin-Psych-1.0.4/.haxelib/hxcpp/4,3,2/include -DHXCPP_DEBUG -DHXCPP_M64 -DHXCPP_VISIT_ALLOCS(haxe) -DHXCPP_DEBUGGER(haxe) -DHX_SMART_STRINGS(haxe) -DHXCPP_API_LEVEL=430(haxe) -D_CRT_SECURE_NO_DEPRECATE -D_ALLOW_MSC_VER_MISMATCH -D_ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH -wd4996 ... tags=[haxe,static]
+ - src/lime/utils/AssetCache.cpp  [haxe,release]
+Link: ApplicationMain-debug.exe
+hxcpp/debug/jsonrpc/Server.hx:86: Debug Server Started:
+hxcpp/debug/jsonrpc/Server.hx:592: Failed to connect to vsc debugger server at 127.0.0.1:6972
+source/backend/Discord.hx:77: Discord Client initialized
+source/objects/Alphabet.hx:322: Reloaded letters successfully (assets/shared/images/alphabet.json)!
+source/backend/Discord.hx:55: (Discord) Connected to User (matthew_dave_and_bambi_enjoyer)
+source/backend/Song.hx:178: converting chart basics with format unknown to psych_v1 format...
+source/states/FreeplayState.hx:418: CURRENT WEEK: week1
+source/states/LoadingState.hx:366: Setting asset folder to shared
+source/states/LoadingState.hx:690: song basics/Voices took 0s to start preloading
+source/states/LoadingState.hx:690: image noteSplashes/noteSplashes took 0s to start preloading
+source/states/LoadingState.hx:690: song basics/Inst took 0s to start preloading
+source/states/LoadingState.hx:690: image characters/bf/main/spritemap1 took 0s to start preloading
+source/states/LoadingState.hx:690: image noteSkins/NOTE_assets took 0s to start preloading
+source/states/LoadingState.hx:690: image characters/gf/main/spritemap1 took 0s to start preloading
+source/states/LoadingState.hx:690: image characters/baldi/core/spritemap1 took 0s to start preloading
+source/states/LoadingState.hx:697: finished preloading image characters/gf/main/spritemap1 in 0.00900077819824219s
+source/states/LoadingState.hx:697: finished preloading image noteSplashes/noteSplashes in 0.0109996795654297s
+source/states/LoadingState.hx:697: finished preloading image noteSkins/NOTE_assets in 0.0249996185302734s
+source/states/LoadingState.hx:697: finished preloading image characters/bf/main/spritemap1 in 0.0389995574951172s
+source/states/LoadingState.hx:697: finished preloading image characters/baldi/core/spritemap1 in 0.115999221801758s
+source/states/LoadingState.hx:697: finished preloading song basics/Voices in 0.367000579833984s
+source/states/LoadingState.hx:697: finished preloading song basics/Inst in 0.375999450683594s
+source/backend/Conductor.hx:123: new BPM map BUDDY []
+[38;5;3m[WARN:mods/stages/classroom.hx:11][0m: Import of class funkin.utils.RandomUtil could not be added
+WARNING: mods/stages/classroom.hx:11: Import of class funkin.utils.RandomUtil could not be added
+[38;5;1m[ERROR:mods/stages/classroom.hx:43][0m: Unknown variable: RandomUtil
+ERROR: (onCreate) - mods/stages/classroom.hx:43: Unknown variable: RandomUtil
+source/states/PlayState.hx:3339: initialized hscript interp successfully: mods/stages/classroom.hx
+source/states/PlayState.hx:3339: initialized hscript interp successfully: mods/characters/baldi.hx
+source/backend/Song.hx:178: converting chart events with format unknown to psych_v1 format...
+source/states/PlayState.hx:1452: ["BASICS" CHART INFO]: Ghost Notes Cleared: 0
+[38;5;3m[WARN:mods/data/basics/script.hx:1][0m: Import of class funkin.game.Story could not be added
+WARNING: mods/data/basics/script.hx:1: Import of class funkin.game.Story could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:2][0m: Import of class funkin.states.PlayState could not be added
+WARNING: mods/data/basics/script.hx:2: Import of class funkin.states.PlayState could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:3][0m: Import of class funkin.objects.Character could not be added
+WARNING: mods/data/basics/script.hx:3: Import of class funkin.objects.Character could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:4][0m: Import of class funkin.scripting.HScript could not be added
+WARNING: mods/data/basics/script.hx:4: Import of class funkin.scripting.HScript could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:8][0m: Import of class funkin.backend.Paths could not be added
+WARNING: mods/data/basics/script.hx:8: Import of class funkin.backend.Paths could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:10][0m: Import of class animate.FlxAnimate could not be added
+WARNING: mods/data/basics/script.hx:10: Import of class animate.FlxAnimate could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:14][0m: Import of class funkin.backend.MathResolver could not be added
+WARNING: mods/data/basics/script.hx:14: Import of class funkin.backend.MathResolver could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:15][0m: Import of class funkin.backend.Conductor could not be added
+WARNING: mods/data/basics/script.hx:15: Import of class funkin.backend.Conductor could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:16][0m: Import of class funkin.utils.CoolUtil could not be added
+WARNING: mods/data/basics/script.hx:16: Import of class funkin.utils.CoolUtil could not be added
+[38;5;3m[WARN:mods/data/basics/script.hx:20][0m: Import of class funkin.objects.AttachedSprite could not be added
+WARNING: mods/data/basics/script.hx:20: Import of class funkin.objects.AttachedSprite could not be added
+[38;5;1m[ERROR:mods/data/basics/script.hx:26][0m: Unknown variable: Story
+ERROR: (onCreate) - mods/data/basics/script.hx:26: Unknown variable: Story
+source/states/PlayState.hx:3339: initialized hscript interp successfully: mods/data/basics/script.hx
+[38;5;1m[ERROR:mods/data/basics/script.hx:71][0m: Unknown variable: Constants
+ERROR: (onCountdownStarted) - mods/data/basics/script.hx:71: Unknown variable: Constants

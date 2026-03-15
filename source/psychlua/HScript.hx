@@ -2,6 +2,13 @@ package psychlua;
 
 import flixel.FlxBasic;
 import objects.Character;
+import funkin.Constants;
+import funkin.game.Story;
+import funkin.utils.RandomUtil;
+import backend.MathResolver;
+import backend.CoolUtil;
+import objects.AttachedSprite;
+import flixel.graphics.atlas.FlxAtlas;
 import psychlua.LuaUtils;
 import psychlua.CustomSubstate;
 
@@ -163,6 +170,9 @@ class HScript extends Iris
 		set('Paths', Paths);
 		set('Conductor', Conductor);
 		set('ClientPrefs', ClientPrefs);
+		set('MathResolver', MathResolver);
+		set('CoolUtil', CoolUtil);
+		set('AttachedSprite', AttachedSprite);
 		#if ACHIEVEMENTS_ALLOWED
 		set('Achievements', Achievements);
 		#end
@@ -175,7 +185,13 @@ class HScript extends Iris
 		set('ErrorHandledRuntimeShader', shaders.ErrorHandledShader.ErrorHandledRuntimeShader);
 		#end
 		set('ShaderFilter', openfl.filters.ShaderFilter);
+		set('ColorSwap', shaders.ColorSwap);
 		set('StringTools', StringTools);
+		set('Constants', Constants);
+		set('Story', Story);
+		set('RandomUtil', RandomUtil);
+		set('FlxAtlas', flixel.graphics.atlas.FlxAtlas);
+		set('HScript', HScript);
 		#if flxanimate
 		set('FlxAnimate', FlxAnimate);
 		#end
@@ -347,6 +363,16 @@ class HScript extends Iris
 		set('Function_StopLua', LuaUtils.Function_StopLua); //doesnt do much cuz HScript has a lower priority than Lua
 		set('Function_StopHScript', LuaUtils.Function_StopHScript);
 		set('Function_StopAll', LuaUtils.Function_StopAll);
+
+		set('initScript', function(scriptPath:String) {
+			try {
+				var script = new HScript(null, Paths.getTextFromFile(scriptPath), null);
+				return script;
+			} catch(e:IrisError) {
+				Iris.error('Failed to load script: $scriptPath - ${Printer.errorToString(e, false)}', this.interp.posInfos());
+				return null;
+			}
+		});
 	}
 
 	#if LUA_ALLOWED

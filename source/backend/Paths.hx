@@ -1,9 +1,9 @@
 package backend;
 
-import flixel.graphics.frames.FlxFrame.FlxFrameAngle;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.graphics.FlxGraphic;
 import flixel.math.FlxRect;
+import flixel.math.FlxPoint;
 import flixel.system.FlxAssets;
 
 import openfl.display.BitmapData;
@@ -411,6 +411,26 @@ class Paths
 		#else
 		return FlxAtlasFrames.fromTexturePackerJson(imageLoaded, getPath(Language.getFileTranslation('images/$key') + '.json', TEXT, parentFolder));
 		#end
+	}
+
+	inline static public function getTextureAtlas(key:String, ?parentFolder:String = null, ?allowGPU:Bool = true):FlxAtlasFrames
+	{
+		var imageLoaded:FlxGraphic = image(key, parentFolder, allowGPU);
+		#if MODS_ALLOWED
+		var jsonExists:Bool = false;
+
+		var json:String = modsImagesJson(key);
+		if(FileSystem.exists(json)) jsonExists = true;
+
+		return fromAdobeAnimateTextureAtlas(imageLoaded, (jsonExists ? File.getContent(json) : getPath(Language.getFileTranslation('images/$key') + '.json', TEXT, parentFolder)));
+		#else
+		return fromAdobeAnimateTextureAtlas(imageLoaded, getPath(Language.getFileTranslation('images/$key') + '.json', TEXT, parentFolder));
+		#end
+	}
+
+	static public function fromAdobeAnimateTextureAtlas(image:FlxGraphic, json:String):FlxAtlasFrames
+	{
+		return FlxAtlasFrames.fromTexturePackerJson(image, json);
 	}
 
 	inline static public function formatToSongPath(path:String) {
